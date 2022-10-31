@@ -1,19 +1,27 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
+import Country from './Country'
 
 export default function Countries() {
   const [countries, setCountries] = useState([])
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
-    .then(res=>res.json())
-    .then(data=>setCountries(data))
-  },[])
+      .then(res => res.json())
+      .then(data => setCountries(data))
+  }, [])
 
 
   return (
     <View>
-      <Text>Nazmul n {countries.length} </Text>
+      <Text>All Country {countries.length} </Text>
+      <ScrollView>
+        {
+          countries.map(country => <Country
+            key={id}
+            country={country}></Country>)
+        }
+      </ScrollView>
     </View>
   )
 }
