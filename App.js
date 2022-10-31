@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Coun from './Coun/Coun';
+import Countries from './Countries/Countries';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Welcome to react native app </Text>
+      <Text>Welcome to React Native App</Text>
       <StatusBar style="auto" />
-      <Coun/>
+      <Countries/>
     </View>
   );
 }
@@ -15,7 +15,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
